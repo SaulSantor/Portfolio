@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Hey, soy saul</h1>
+        <p>Desarrollador Web | Python | Flask</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('main.about') }}" class="btn btn-primary">Sobre Mí</a>
+            <a href="{{ url_for('main.contact') }}" class="btn btn-secondary">Contáctame</a>
+        </div>
+    </div>
+</div>
+
+<section class="featured-projects">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Proyecto Web</h3>
+            <p>Aplicación web desarrollada con Flask y SQLAlchemy</p>
+        </div>
+        <div class="project-card">
+            <h3>Análisis de Datos</h3>
+            <p>Proyecto de análisis utilizando Python y pandas</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

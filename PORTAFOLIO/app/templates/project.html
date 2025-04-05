@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Mis Proyectos{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="projects-container">
+    <h1>Mis Proyectos</h1>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='img/proyecto1.jpg') }}" alt="Proyecto 1">
+            <div class="project-info">
+                <h3>Sistema de Gestión</h3>
+                <p>Aplicación web desarrollada con Flask para gestión empresarial</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>SQLAlchemy</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Ver Código</a>
+                    <a href="#" target="_blank">Demo en Vivo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='img/proyecto2.jpg') }}" alt="Proyecto 2">
+            <div class="project-info">
+                <h3>Aplicación de Análisis de Datos</h3>
+                <p>Herramienta de visualización y análisis de datos con Pandas y Plotly</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Plotly</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Ver Código</a>
+                    <a href="#" target="_blank">Demo en Vivo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+{% endblock %}

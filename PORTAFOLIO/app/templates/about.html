@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre Mí{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="profile-section">
+        <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Tu Foto" class="profile-image">
+        <h1>Tu Nombre Completo</h1>
+        <h2>Desarrollador Web | Ingeniero de Software</h2>
+    </div>
+
+    <div class="bio-section">
+        <h3>Sobre Mí</h3>
+        <p>
+            Soy un apasionado desarrollador web con experiencia en tecnologías modernas.
+            Me especializo en crear soluciones web eficientes y escalables.
+            Mi objetivo es combinar creatividad técnica con resolución práctica de problemas.
+        </p>
+    </div>
+
+    <div class="education-section">
+        <h3>Educación</h3>
+        <div class="education-item">
+            <h4>Ingeniería en Sistemas Computacionales</h4>
+            <p>Universidad Ejemplo, Graduado en 2023</p>
+        </div>
+    </div>
+
+    <div class="experience-section">
+        <h3>Experiencia Profesional</h3>
+        <div class="experience-item">
+            <h4>Desarrollador Web Junior</h4>
+            <p>Empresa Tecnológica, 2022 - Presente</p>
+            <ul>
+                <li>Desarrollo de aplicaciones web con Flask y Django</li>
+                <li>Implementación de soluciones backend con Python</li>
+                <li>Colaboración en proyectos de desarrollo ágil</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}
